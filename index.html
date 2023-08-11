@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1>
+        matal balls
+    </h1>
+    <ul>
+        <li id="metal_red"></li>
+        <li id="metal_blue"></li>
+        <li id="metal_black"></li>
+        <li id="metal_green"></li>
+    </ul>
+    <h1>
+        snooker balls
+    </h1>
+    <ul>
+        <li id="snooker_red"></li>
+        <li id="snooker_blue"></li>
+        <li id="snooker_black"></li>
+        <li id="snooker_green"></li>
+    </ul>
+    
+    <h1>
+        Total balls
+    </h1>
+    <ul>
+        <li id="total_red"></li>
+        <li id="total_blue"></li>
+        <li id="total_black"></li>
+        <li id="total_green"></li>
+    </ul>
+
+    
+
+
+    <script>
+
+
+
+        const metal_balls = {
+            red:2,
+            blue:4, 
+            black:10,
+            green:8
+        }
+
+        document.getElementById('metal_red').innerHTML='red:'+metal_balls['red']
+        document.getElementById('metal_blue').innerHTML='blue:'+metal_balls['blue']
+        document.getElementById('metal_black').innerHTML='black:'+metal_balls['black']
+        document.getElementById('metal_green').innerHTML='green:'+metal_balls['green']
+
+        
+
+
+    
+        const snooker_balls = {
+            red: 6,
+            blue:3, 
+            black:7,
+            green:9
+        }
+
+        document.getElementById('snooker_red').innerHTML='red:'+snooker_balls['red']
+        document.getElementById('snooker_blue').innerHTML='blue:'+snooker_balls['blue']
+        document.getElementById('snooker_black').innerHTML='black:'+snooker_balls['black']
+        document.getElementById('snooker_green').innerHTML='green:'+snooker_balls['green']
+    
+        const total_balls = {
+            red: 0,
+            blue:0, 
+            black:0,
+            green:0
+        }
+
+        total_balls['red']=metal_balls['red']+snooker_balls['red']   
+        total_balls['blue']=metal_balls['blue']+snooker_balls['blue']
+        total_balls['black']=metal_balls['black']+snooker_balls['black']
+        total_balls['green']=metal_balls['green']+snooker_balls['green']
+
+
+        document.getElementById('total_red').innerHTML='red:'+total_balls['red']
+        document.getElementById('total_blue').innerHTML='blue:'+total_balls['blue']
+        document.getElementById('total_black').innerHTML='black:'+total_balls['black']
+        document.getElementById('total_green').innerHTML='green:'+total_balls['green']
+
+    
+    
+    
+        console.log(total_balls)
+    
+    
+    </script>
+</body>
+</html>
+
+
+
